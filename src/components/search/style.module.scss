@@ -1,0 +1,35 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6rem 2rem 6rem;
+  gap: 1rem;
+
+  button{
+    height: 2.5rem;
+  padding: 0 1rem;
+  }
+}
+
+.autoInput{
+  position: relative;
+  z-index: 2;
+  color: #1a1a1a;
+  width: 30%;
+  &:focus-within{
+    z-index: 3;
+  }
+}
+
+
+@media  screen and (max-width: 767px){
+  .container{
+    flex-direction: column;
+    width: calc(100% - 4rem);
+    .autoInput{
+      width:100%;
+      max-width: 25rem;
+    }
+  }
+}
+
